@@ -16,7 +16,7 @@ export class HashBaseline implements Baseline {
       const filePath = path.relative(opts.cwd, result.filePath);
 
       for (const message of result.messages) {
-        if (message.ruleId === null || message.severity < 2) {
+        if (message.ruleId === null) {
           continue;
         }
 
